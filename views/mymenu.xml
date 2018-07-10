@@ -1,0 +1,47 @@
+<?xml	version="1.0"?>
+<odoo>
+
+        <!-- Inisialisasi Model-->
+		<record model="ir.actions.act_window" id="rfid_list_action">
+            <field name="name">RFID Tag Monitoring</field>
+            <field name="res_model">rfid.tag</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">Automatically read API from intellifi
+                </p>
+            </field>
+		</record>
+
+
+        <record model="ir.actions.act_window" id="list_polybox_action">
+            <field name="name"> List Polybox</field>
+            <field name="res_model">rfid.polybox</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">Tambah polybox untuk tracking barang </p>
+            </field>
+        </record>
+
+        <!-- Inisialisasi Top Menu -->
+        <!-- top level menu: no parent -->
+        <menuitem id="main_rfid_menu" name="RFID Monitoring"/>
+        <!-- A first level in the left side menu is needed
+             before using action= attribute -->
+
+        <!-- Side Bar Menu -->
+        <menuitem id="rfid_menu" name="RFID Monitoring"
+                  parent="main_rfid_menu"/>
+        <!-- the following menuitem should appear *after*
+             its parent openacademy_menu and *after* its
+             action course_list_action -->
+        <menuitem id="monitoring_menu" name="Read TAG" parent="rfid_menu"
+                  action="rfid_list_action"/>
+
+		<menuitem id="polybox_menu" name="List Polybox" parent="rfid_menu"
+                  action="list_polybox_action"/>
+
+
+
+</odoo>

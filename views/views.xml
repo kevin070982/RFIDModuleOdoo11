@@ -1,0 +1,90 @@
+<odoo>
+  <data>
+  
+   <!-- <record id="view_student_tree" model="ir.ui.view">
+      <field name="name">rfid.barang.tree</field>
+      <field name="model">rfid.barang</field>
+      <field name="priority" eval="8" />
+      <field name="arch" type="xml">
+          <tree string="Barang">
+              <field name="id_barang" />
+              <field name="nama_barang" />
+          </tree>
+      </field>
+    </record> -->
+
+
+    <!-- <record model="ir.actions.act_window" id="action_view_barang">
+      <field name="name"> Barang </field>
+      <field name="res_model"> rfid.barang </field> 
+      <field name="view_type">form</field>
+      <field name="view_mode">tree,form</field>
+      <field name="domain">[]</field>
+      <field name="help" type="html">
+        <p class="oe_view_nocontent_create">Create new Barang
+                </p>
+      </field>
+    </record> -->
+
+    <!--
+    <menuitem id="menu_barang" name="Barang"/>
+    <menuitem id="list_barang" name="Barang" parent="menu_barang" action="action_view_barang"/> -->
+
+    <!-- explicit list view definition -->
+    <!--
+    <record model="ir.ui.view" id="rfid.list">
+      <field name="name">rfid list</field>
+      <field name="model">rfid.rfid</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="value"/>
+          <field name="value2"/>
+        </tree>
+      </field>
+    </record>
+    -->
+
+    <!-- actions opening views on models -->
+    <!--
+    <record model="ir.actions.act_window" id="rfid.action_window">
+      <field name="name">rfid window</field>
+      <field name="res_model">rfid.rfid</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+    -->
+
+    <!-- server action to the one above -->
+    <!--
+    <record model="ir.actions.server" id="rfid.action_server">
+      <field name="name">rfid server</field>
+      <field name="model_id" ref="model_rfid_rfid"/>
+      <field name="state">code</field>
+      <field name="code">
+        action = {
+          "type": "ir.actions.act_window",
+          "view_mode": "tree,form",
+          "res_model": self._name,
+        }
+      </field>
+    </record>
+    -->
+
+    <!-- Top menu item -->
+    <!--
+    <menuitem name="rfid" id="rfid.menu_root"/>
+    -->
+    <!-- menu categories -->
+    <!--
+    <menuitem name="Menu 1" id="rfid.menu_1" parent="rfid.menu_root"/>
+    <menuitem name="Menu 2" id="rfid.menu_2" parent="rfid.menu_root"/>
+    -->
+    <!-- actions -->
+    <!--
+    <menuitem name="List" id="rfid.menu_1_list" parent="rfid.menu_1"
+              action="rfid.action_window"/>
+    <menuitem name="Server to list" id="rfid" parent="rfid.menu_2"
+              action="rfid.action_server"/>
+    -->
+  </data>
+</odoo>

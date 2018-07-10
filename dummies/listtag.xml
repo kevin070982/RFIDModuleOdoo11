@@ -1,0 +1,18 @@
+<!-- this is dummies data for rfid tag model-->
+<odoo>
+    <data>
+        <record id="tag1" model="rfid.tag">
+            <field name="hexcode">tag12345</field>
+            <field name="status">ada</field>
+        </record>
+        <record id="tag2" model="rfid.tag">
+            <field name="hexcode">tag123456</field>
+            <field name="status">ada</field>
+        </record>
+        <record id="tag3" model="rfid.tag">
+            <field name="hexcode">tag123457</field>
+            <field name="status">ada</field>
+        </record>
+
+    </data>
+</odoo>

@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<odoo>
+        <record model="ir.ui.view" id="polybox_form_view">
+            <field name="name">rfidpolybox.form</field>
+            <field name="model">rfid.polybox</field>
+            <field name="arch" type="xml">
+                <!-- Create form -->
+                <form string="Polybox Form">
+                    <sheet>
+                        <div class="oe_title">
+                            <label for="name" class="oe_edit_only" string="Nama Polybox" />
+                            <h1><field name="nama_polybox" /></h1>
+                        </div>
+                        <separator string="Deskripsi Polybox" colspan="2" />
+                        <group colspan="3" col="3">
+                            <field name="id_polybox" placeholder="ID Polybox (RFID Hex Tag)..." />
+                            <field name="status_polybox" placeholder="Status Polybox" />
+                            <field name="deskripsi" placeholder="Deskripsi Polybox" />
+                            <field name="listProduct" placeholder="Jumlah produk..." />
+                            <field name="tgl_kirim" placeholder="Tanggal kirim polybox..." />
+                            <field name="tgl_masuk" placeholder="Tanggal masuk polybox..." />
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- view for polybox -->
+        <record model="ir.ui.view" id="polybox_tree_view">
+            <field name="name">rfidpolybox.tree</field>
+            <field name="model">rfid.polybox</field>
+            <field name="arch" type="xml">
+                <tree>
+						<field	name="id_polybox"/>
+						<field	name="nama_polybox"/>
+                        <field	name="status_polybox"/>
+                        <field	name="listProduct"/>
+						<field	name="tgl_kirim"/>
+						<field	name="tgl_masuk"/>
+                        <field name="deskripsi"/>
+
+				</tree>
+            </field>
+        </record>
+
+</odoo>
+
