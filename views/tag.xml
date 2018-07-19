@@ -3,11 +3,53 @@
     <record	id="view_tree_tag"	model="ir.ui.view">
 		<field	name="name">Tag Tree</field>
 		<field	name="model">rfid.tag</field>
+
 		<field	name="arch"	type="xml">
+
 				<tree>
-						<field	name="hexcode"/>
-                        <field name="status"/>
+                    <!--<button string="Scan RFID" type="object" name="invoke_API" class="oe_highlight"/>-->
+
+                    <field	name="hexcode" />
+                    <!--<field name="status"/>-->
 				</tree>
+
 		</field>
+
+
 	</record>
+
+
+    <record id="tag_wizard" model="ir.ui.view">
+            <field name="name">rfid.wizard.name</field>
+            <field name="model">rfid.tag</field>
+            <field name="arch" type="xml">
+                <form string="RFID Scan">
+                    <header>
+                        <button name="invoke_API"
+                            string="Save RFID" type="object"
+                            class="btn-primary"/>
+
+                        <button string="Cancel"
+                            class="btn-default"
+                            special="cancel" />
+                    </header>
+                    <group>
+                        <field	name="hexcode" placeholder="ID Tag"/>
+                        <!--<field name="status"/>-->
+                    </group>
+
+                </form>
+            </field>
+    </record>
+
+    <!--Load the javascript file for additional button-->
+    <template id="assets_backend" name="rfid.filter_buttons assets" inherit_id="web.assets_backend">
+
+        <xpath expr="." position="inside">
+
+            <script src="/rfid/static/src/js/index.js" type="text/javascript"/>
+
+        </xpath>
+
+    </template>
 </odoo>

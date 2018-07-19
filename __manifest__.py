@@ -6,7 +6,7 @@
         this modules read rfid tag from API""",
 
     'description': """
-        API RFID from intellifi make http request and get the HEX Code. 
+        Check TAG using intellifi RFID for supply chain mechanism at B4T. 
     """,
 
     'author': "B4T",
@@ -30,9 +30,11 @@
         'views/tag.xml',
         'dummies/listtag.xml',
         'views/polybox_list.xml',
+        'static/src/xml/supporthtmlset.xml',
         #'views/templates.xml',
     ],
     'installable': True,
     'auto_install': False,
     'application': True,
+    'qweb': ['static/src/xml/qweb.xml'],
 }
