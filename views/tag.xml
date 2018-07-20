@@ -47,7 +47,7 @@
 
         <xpath expr="." position="inside">
 
-            <script src="/rfid/static/src/js/index.js" type="text/javascript"/>
+            <script src="/RFIDModuleOdoo11/static/src/js/index.js" type="text/javascript"/>
 
         </xpath>
 

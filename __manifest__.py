@@ -28,7 +28,7 @@
         'views/mymenu.xml',
         'views/mainview.xml',
         'views/tag.xml',
-        'dummies/listtag.xml',
+        # 'dummies/listtag.xml',
         'views/polybox_list.xml',
         'static/src/xml/supporthtmlset.xml',
         #'views/templates.xml',
